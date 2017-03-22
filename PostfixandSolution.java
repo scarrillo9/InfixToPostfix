@@ -50,19 +50,21 @@ public class PostfixandSolution {
 					//check if expression is valid to solve, if there is not 
 					//2 numbers in the stack, then no operation can take place
 					if(solving.isEmpty()){
-						System.out.println("\nInvalid expression, can't solve.");
+						System.out.println("\nInvalid expression,"
+								   + " can't solve.");
 						return -9178276.7;
 					}
 					else
 						num1 = solving.pop();
 					if(solving.isEmpty()){
-						System.out.println("\nInvalid expression, can't solve.");
+						System.out.println("\nInvalid expression,"
+								   + " can't solve.");
 						return -9178276.7;
 					}
 					else
 						num2 = solving.pop();
 					
-					//if passed, it will go through the operations to solve expression
+					//if passed, it will go through the operations to solve
 					//until stack is empty and the end value can be passed
 					switch(ch){
 					case '+':
@@ -78,7 +80,7 @@ public class PostfixandSolution {
 						solving.push((num1 / num2));
 						break;
 					default:
-						System.out.println("Not a valid postfix expression.");
+						System.out.println("Not a valid expression.");
 					}//end switch
 				}//end else
 			}//end if character is not empty
